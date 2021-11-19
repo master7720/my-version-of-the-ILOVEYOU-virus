@@ -267,7 +267,7 @@ else
 lines(n)=chr(34)+lines(n)+chr(34)&"&vbcrlf& _" end if
 next
 set b=fso.CreateTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM") b.close
-set d=fso.OpenTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM",2) d.write dt5
+set d=fso.OpenTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM", 2) d.write dt5
 d.write join(lines,vbcrlf)
 d.write vbcrlf
 d.write dt6

